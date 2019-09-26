@@ -1,0 +1,16 @@
+%h1 All Groups
+%table#groups
+  %thead
+    %tr
+      %th Group_id
+      %th Meet Time
+      %th Class Code
+      %th Group Name
+  %tbody
+    - @groups.each do |group|
+      %tr
+        %td= group.group_id 
+        %td= group.time
+        %td= group.class_code
+        %td= group.group_name
+        %td= link_to "More about #{group.group_name}", group_path(group)

@@ -1,0 +1,13 @@
+%h2 Details about #{@group.group_name}
+
+
+
+%ul#details
+  %li
+    Location:
+    = @group.location
+  %li
+    Members:
+    = @group.members
+
+= link_to 'Back to group list', groups_path
