@@ -3,9 +3,9 @@ class GroupsController < ApplicationController
         @groups = Group.all
     end
 
-    def details
-        id = params[:id]
-        @group = Group.find(id)
+    def show
+        #id = params[:id]
+        @group = Group.find params[:id]
     end
 
 end
