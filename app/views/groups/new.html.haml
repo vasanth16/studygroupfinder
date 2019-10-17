@@ -1,0 +1,24 @@
+%h2 Create New Movie 
+ 
+ 
+= form_tag groups_path, :method => :post do 
+
+  = label :group, :group_id, 'group_id' 
+  = text_field :group, :group_id 
+ 
+  = label :group, :time, 'time' 
+  = text_field :group, :time
+   
+  = label :group, :location, 'location' 
+  = text_field :group, :location
+
+  = label :group, :members, 'number of member' 
+  = text_field :group, :members
+
+  = label :group, :class_code, 'class code' 
+  = text_field :group, :class_code
+
+  = label :group, :group_name, 'name of the group' 
+  = text_field :group, :group_name
+ 
+  = submit_tag 'Save Changes' 
