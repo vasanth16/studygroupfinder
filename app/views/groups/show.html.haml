@@ -1,7 +1,5 @@
 %h2 Details about #{@group.group_name}
 
-
-
 %ul#details
   %li
     Location:
@@ -11,3 +9,4 @@
     = @group.members
 
 = link_to 'Back to group list', groups_path
+= submit_tag 'Join group'
