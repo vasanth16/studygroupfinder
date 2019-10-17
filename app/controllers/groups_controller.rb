@@ -21,4 +21,8 @@ class GroupsController < ApplicationController
         redirect_to groups_path 
     end
     
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> stuff
