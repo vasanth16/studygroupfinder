@@ -1,16 +1,19 @@
-%h2 Create New Movie 
- 
- 
+%h2 Create New Group 
+
+-#=form_for :group, groups_path do |f|
+-#  if @group.errors.any?
+-#    @group.errors.full_messages.each do |msg|
+-#      =msg
+-#    end
+-#  end
+  
 = form_tag groups_path, :method => :post do 
  
   = label :group, :time, 'time' 
   = text_field :group, :time
-   
+
   = label :group, :location, 'location' 
   = text_field :group, :location
-
-  = label :group, :members, 'number of member' 
-  = text_field :group, :members
 
   = label :group, :class_code, 'class code' 
   = text_field :group, :class_code
@@ -19,3 +22,4 @@
   = text_field :group, :group_name
  
   = submit_tag 'Save Changes' 
+  = link_to 'Back to group list', groups_path
