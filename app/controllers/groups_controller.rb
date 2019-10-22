@@ -35,7 +35,7 @@ class GroupsController < ApplicationController
     end
     
     private def group_params
-        params.require(:group).permit(:group_id,:time,:location,:member, :class_code, :group_name)
+        params.require(:group).permit(:group_id,:time,:location,:members, :class_code, :group_name)
     end
     
     def destroy
