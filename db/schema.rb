@@ -23,5 +23,7 @@ ActiveRecord::Schema.define(version: 2019_09_26_024257) do
     t.string "class_code"
     t.string "group_name"
   end
+  
+  
 
 end
