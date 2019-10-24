@@ -30,8 +30,17 @@ more_groups = [
     {:group_id => '19', :time => '9:30pm', :location => 'Gibson', :members =>'9', :class_code => 'CMPS1600', :group_name => 'Group 19'}
 ]
 
-
-
 more_groups.each do |group|
     Group.create!(group)
+end
+
+
+more_users = [
+    {:email => 'abc@test.com', :first_name => 'John', :last_name => 'Appleseed'},
+    {:email => 'kimmy23@gmail.com', :first_name => 'Kim', :last_name => 'Possible'},
+    {:email => 'bruh@yahoo.com', :first_name => 'Bruh', :last_name => 'Bruh'}
+]
+
+more_users.each do |user|
+    User.create!(user)
 end
