@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_09_26_024257) do
 
-  create_table "groups", force: :cascade do |t|
+  create_table "groups" do |t|
     t.string "group_id"
     t.string "time"
     t.string "location"
