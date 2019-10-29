@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
 
     def show
         #id = params[:id]
+        @participations = Participation.all
         @group = Group.find params[:id]
     end
     

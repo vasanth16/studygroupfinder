@@ -7,7 +7,14 @@
     = @group.location
   %li
     Members:
-    = @group.members
+    %table#participations
+      %thead
+        %tr
+          %th user_id
+      %tbody
+        - @participations.each do |participation|
+          %tr
+            %td= participation.user_id
 
 
 = link_to 'Add members', new_participation_path(@group)
