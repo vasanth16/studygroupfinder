@@ -1,0 +1,19 @@
+%h2 Join Group
+
+-#=form_for :group, groups_path do |f|
+-#  if @group.errors.any?
+-#    @group.errors.full_messages.each do |msg|
+-#      =msg
+-#    end
+-#  end
+  
+= form_tag participations_path, :method => :post do 
+ 
+  = label :participation, :group_id, 'group_name'
+  = text_field :participation, :group_id
+
+  = label :participation, :email, 'user_id'
+  = text_field :participation, :email
+ 
+  = submit_tag 'Join!' 
+  

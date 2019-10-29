@@ -1,0 +1,22 @@
+%h2 Create New User 
+
+-#=form_for :group, groups_path do |f|
+-#  if @group.errors.any?
+-#    @group.errors.full_messages.each do |msg|
+-#      =msg
+-#    end
+-#  end
+  
+= form_tag users_path, :method => :post do 
+ 
+  = label :user, :email, 'email' 
+  = text_field :user, :email
+
+  = label :user, :first_name, 'first name' 
+  = text_field :user, :first_name
+  
+  = label :user, :last_name, 'last name' 
+  = text_field :user, :last_name
+ 
+  = submit_tag 'Save Changes' 
+  = link_to 'Back to user list', users_path
