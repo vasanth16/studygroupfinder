@@ -8,23 +8,23 @@
 
 
 more_groups = [
-    {:group_id => '0', :time => '8:30pm', :location => 'ST302', :members =>'3', :class_code => 'CMPS3300', :group_name => 'Group 0'},
-    {:group_id => '1', :time => '9:30pm', :location => 'Gibson 333', :members =>'4', :class_code => 'CMPS1600', :group_name => 'Group 1'},
-    {:group_id => '2', :time => '4:00pm', :location => 'Richardson 117', :members =>'5', :class_code => 'CMPS1500', :group_name => 'Group 2'},
-    {:group_id => '3', :time => '11:00am', :location => 'ST302', :members =>'3', :class_code => 'CMPS3300', :group_name => 'Group 3'},
-    {:group_id => '4', :time => '9:00pm', :location => 'Gibson', :members =>'7', :class_code => 'CMPS1600', :group_name => 'Group 4'},
-    {:group_id => '5', :time => '9:30pm', :location => 'Gibson', :members =>'4', :class_code => 'CMPS1600', :group_name => 'Group 5'},
-    {:group_id => '6', :time => '8:30pm', :location => 'ST302', :members =>'3', :class_code => 'CMPS3300', :group_name => 'Group 6'},
-    {:group_id => '7', :time => '9:30pm', :location => 'Gibson', :members =>'9', :class_code => 'CMPS2100', :group_name => 'Group 7'},
-    {:group_id => '8', :time => '9:30pm', :location => 'Gibson', :members =>'6', :class_code => 'CMPS1600', :group_name => 'Group 8'},
-    {:group_id => '9', :time => '8:30pm', :location => 'ST302', :members =>'3', :class_code => 'CMPS2200', :group_name => 'Group 9'},
-    {:group_id => '10', :time => '9:30pm', :location => 'Gibson', :members =>'5', :class_code => 'CMPS1600', :group_name => 'Group 10'},
-    {:group_id => '11', :time => '9:30pm', :location => 'Gibson', :members =>'14', :class_code => 'CMPS1500', :group_name => 'Group 11'},
-    {:group_id => '12', :time => '8:30pm', :location => 'ST302', :members =>'3', :class_code => 'CMPS32100', :group_name => 'Group 12'},
-    {:group_id => '13', :time => '9:30pm', :location => 'Gibson', :members =>'11', :class_code => 'CMPS1500', :group_name => 'Group 13'},
-    {:group_id => '14', :time => '9:30pm', :location => 'Gibson', :members =>'4', :class_code => 'CMPS1600', :group_name => 'Group 14'},
-    {:group_id => '15', :time => '8:30pm', :location => 'ST302', :members =>'6', :class_code => 'CMPS3300', :group_name => 'Group 15'},
-    {:group_id => '16', :time => '9:30pm', :location => 'Gibson', :members =>'10', :class_code => 'CMPS1600', :group_name => 'Group 16'},
+    {:group_id => '0', :time => '8:30pm', :location => 'Stanley Thomas 302', :members =>'3', :class_code => 'CMPS3300', :group_name => 'Coding Club'},
+    {:group_id => '1', :time => '9:30pm', :location => 'Gibson 233', :members =>'4', :class_code => 'ENGL1010', :group_name => 'We Write Good'},
+    {:group_id => '2', :time => '4:00pm', :location => 'Richardson 117', :members =>'5', :class_code => 'CMPS1500', :group_name => 'Intro 1 Study'},
+    {:group_id => '3', :time => '10:00pm', :location => '1st Floor Howie T', :members =>'11', :class_code => 'CHEM1070', :group_name => 'Gen Chem Study Group'},
+    {:group_id => '4', :time => '11:00am', :location => 'Newcomb 115', :members =>'7', :class_code => 'SPAN2040', :group_name => 'Hablando Juntos'},
+    {:group_id => '5', :time => '7:30pm', :location => 'Dinwittie 111', :members =>'4', :class_code => 'ANTH1010', :group_name => 'Bio Anthro Gang'},
+    {:group_id => '6', :time => '4:30pm', :location => 'Boggs 112', :members =>'6', :class_code => 'PHYS1320', :group_name => 'Physics II'},
+    {:group_id => '7', :time => '10:00am', :location => '3rd Floor Howie T', :members =>'1', :class_code => 'CMPS2100', :group_name => 'Help me please'},
+    {:group_id => '8', :time => '9:30pm', :location => 'Richardson 117', :members =>'6', :class_code => 'NSCI3300', :group_name => 'Brain Buddies'},
+    {:group_id => '9', :time => '7:00pm', :location => 'ST302', :members =>'3', :class_code => 'CMPS2200', :group_name => 'Group 9'},
+    {:group_id => '10', :time => '10:30pm', :location => 'Gibson', :members =>'5', :class_code => 'CMPS1600', :group_name => 'Group 10'},
+    {:group_id => '11', :time => '9:30am', :location => 'Gibson', :members =>'14', :class_code => 'CMPS1500', :group_name => 'Group 11'},
+    {:group_id => '12', :time => '12:30pm', :location => 'ST302', :members =>'3', :class_code => 'CMPS32100', :group_name => 'Group 12'},
+    {:group_id => '13', :time => '6:00pm', :location => 'Gibson', :members =>'11', :class_code => 'CMPS1500', :group_name => 'Group 13'},
+    {:group_id => '14', :time => '9:15pm', :location => 'Gibson', :members =>'4', :class_code => 'CMPS1600', :group_name => 'Group 14'},
+    {:group_id => '15', :time => '8:30pm', :location => 'Gibson 115', :members =>'6', :class_code => 'CMPS3300', :group_name => 'Group 15'},
+    {:group_id => '16', :time => '11:00am', :location => 'Gibson', :members =>'10', :class_code => 'CMPS1600', :group_name => 'Group 16'},
     {:group_id => '17', :time => '9:30pm', :location => 'Gibson', :members =>'3', :class_code => 'CMPS1500', :group_name => 'Group 17'},
     {:group_id => '18', :time => '8:30pm', :location => 'ST302', :members =>'8', :class_code => 'CMPS3300', :group_name => 'Group 18'},
     {:group_id => '19', :time => '9:30pm', :location => 'Gibson', :members =>'9', :class_code => 'CMPS1600', :group_name => 'Group 19'}
@@ -38,7 +38,10 @@ end
 more_users = [
     {:email => 'abc@test.com', :first_name => 'John', :last_name => 'Appleseed'},
     {:email => 'kimmy23@gmail.com', :first_name => 'Kim', :last_name => 'Possible'},
-    {:email => 'bruh@yahoo.com', :first_name => 'Bruh', :last_name => 'Bruh'}
+    {:email => 'bruh@yahoo.com', :first_name => 'Bruh', :last_name => 'Bruh'},
+    {:email => 'rufusfan@gmail.com', :first_name => 'Ron', :last_name => 'Stoppable'},
+    {:email => 'alexnbuck@gmail.com', :first_name => 'Alex', :last_name => 'Buck'},
+    {:email => 'bruh@yahoo.com', :first_name => 'Bruh', :last_name => 'Bruh'},
 ]
 
 more_users.each do |user|
