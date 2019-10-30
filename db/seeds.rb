@@ -25,8 +25,8 @@ more_groups = [
     {:group_id => '14', :time => '9:15pm', :location => 'Dixon 201', :members =>'4', :class_code => 'MUSC3100', :group_name => 'Learn to Sing'},
     {:group_id => '15', :time => '8:30pm', :location => 'Gibson 115', :members =>'6', :class_code => 'MATH2210', :group_name => 'Calc III Coping Sesh'},
     {:group_id => '16', :time => '11:00am', :location => 'Basement Howie T', :members =>'10', :class_code => 'CELL1010', :group_name => 'The mitochondria is the powerhouse of the cell'},
-    {:group_id => '18', :time => '5:30pm', :location => 'ST302', :members =>'8', :class_code => 'CMPS3300', :group_name => 'Group 18'},
-    {:group_id => '19', :time => '8:00am', :location => 'Gibson', :members =>'9', :class_code => 'CMPS1600', :group_name => 'Group 19'}
+    {:group_id => '18', :time => '5:30pm', :location => 'The Commons', :members =>'8', :class_code => 'MATH3090', :group_name => 'Analyzing Reals'},
+    {:group_id => '19', :time => '8:00am', :location => 'Stanley Thomas 311', :members =>'9', :class_code => 'CMPS2200', :group_name => 'Algo-rhythms'}
 ]
 
 more_groups.each do |group|
@@ -39,8 +39,22 @@ more_users = [
     {:email => 'kimmy23@gmail.com', :first_name => 'Kim', :last_name => 'Possible'},
     {:email => 'bruh@yahoo.com', :first_name => 'Bruh', :last_name => 'Bruh'},
     {:email => 'rufusfan@gmail.com', :first_name => 'Ron', :last_name => 'Stoppable'},
-    {:email => 'alexnbuck@gmail.com', :first_name => 'Alex', :last_name => 'Buck'},
-    {:email => 'bruh@yahoo.com', :first_name => 'Bruh', :last_name => 'Bruh'},
+    {:email => 'abuck2@tulane.edu', :first_name => 'Alex', :last_name => 'Buck'},
+    {:email => 'thewalrus@hotmail.com', :first_name => 'Kookoo', :last_name => 'Kachoo'},
+    {:email => 'octopussgarden@beatles.co.uk', :first_name => 'Ringo', :last_name => 'Starr'},
+    {:email => 'mydad@yahoo.com', :first_name => 'Mi', :last_name => 'Padre'},
+    {:email => 'president@tulane.edu', :first_name => 'Mike', :last_name => 'Fitts'},
+    {:email => 'tutonespresident@gmail.com', :first_name => 'TU Tones', :last_name => 'President'},
+    {:email => 'obama@whitehouse.gov', :first_name => 'Barack', :last_name => 'Obama'},
+    {:email => 'captjack@gmail.com', :first_name => 'Jack', :last_name => 'Sparrow'},
+    {:email => 'captjack2@gmail.co.uk', :first_name => 'Jack', :last_name => 'Harkness'},
+    {:email => 'bpitt@tulane.edu', :first_name => 'Brad', :last_name => 'Pitt'},
+    {:email => 'thelib@tulane.edu', :first_name => 'Howard', :last_name => 'Tilton'},
+    {:email => 'bestdorm@tulane.edu', :first_name => 'Lallage Feazel', :last_name => 'Wall'},
+    {:email => 'genericuser@yahoo.com', :first_name => 'Firstname', :last_name => 'Lastname'},
+    {:email => 'badperson@hotmail.com', :first_name => 'Christopher', :last_name => 'Columbus'},
+    {:email => 'ogprez@whitehouse.gov', :first_name => 'George', :last_name => 'Washington'},
+    {:email => 'akurdia@tulane.edu', :first_name => 'Anastasia', :last_name => 'Kurdia'}
 ]
 
 more_users.each do |user|
