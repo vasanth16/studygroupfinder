@@ -9,9 +9,10 @@
     Members:
     %table#participations
       %tbody
-        - @participations.each do |participation|
+        - @users.each do |user|
           %tr
-            %td= participation.user_id
+            %td= user.id
+            %td= user.email
 
 
 = link_to 'Add members', new_participation_path(@group)
