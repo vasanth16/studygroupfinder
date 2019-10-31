@@ -6,8 +6,11 @@
     = @group.location
   %li
     Members:
-    = @group.members
-
+    %table#participations
+      %tbody
+        - @participations.each do |participation|
+          %tr
+            %td= participation.user_id
 
 = link_to 'Add members', new_participation_path(@group)
 %h3= link_to "Delete", @group, method: :delete, data: {confirm:"are you sure?"}

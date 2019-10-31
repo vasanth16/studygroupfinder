@@ -7,6 +7,7 @@ class GroupsController < ApplicationController
     def show
         #id = params[:id]
         @group = Group.find params[:id]
+        @participations = Participation.where(:group_id => @group.group_id)
     end
 
     def new 
