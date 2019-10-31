@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
 
     def create
         params.require(:group)
-        permitted = params[:group].permit(:group_id,:time,:location,:class_code, :group_name)
+        permitted = params[:group].permit(:group_id,:time,:location,:class_code,:group_name)
         @group = Group.create!(permitted)
         flash[:notice] = "#{@group.group_name} was successfully created." 
         redirect_to groups_path 
