@@ -20,6 +20,7 @@ more_groups = [
     {:group_id => '19', :time => '8:00am', :location => 'Stanley Thomas 311', :members => '1', :class_code => 'CMPS2200', :group_name => 'Algo-rhythms'}
 ]
 
+
 more_groups.each do |group|
     Group.create!(group)
 end
