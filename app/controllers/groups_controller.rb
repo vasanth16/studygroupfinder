@@ -7,7 +7,6 @@ class GroupsController < ApplicationController
         #id = params[:id]
         @group = Group.find params[:id]
         @participations = Participation.where(:group_id => @group.group_id)
-        @users = User.where(:id => Participation.where(:group_id => @group.group_id))
     end
     
     def new 

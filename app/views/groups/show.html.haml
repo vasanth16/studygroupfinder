@@ -9,10 +9,9 @@
     Members:
     %table#participations
       %tbody
-        - @users.each do |user|
+        - @participations.each do |participation|
           %tr
-            %td= user.email
-
+            %td= participation.user_id
 
 = link_to 'Add members', new_participation_path(@group)
 %h3= link_to "Delete", @group, method: :delete, data: {confirm:"are you sure?"}
