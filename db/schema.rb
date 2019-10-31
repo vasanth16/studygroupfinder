@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_10_24_195543) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "groups", force: :cascade do |t|
     t.string "group_id"
     t.string "time"
@@ -25,8 +22,8 @@ ActiveRecord::Schema.define(version: 2019_10_24_195543) do
   end
 
   create_table "participations", force: :cascade do |t|
-    t.bigint "group_id"
-    t.bigint "user_id"
+    t.integer "group_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_participations_on_group_id"

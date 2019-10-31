@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     resources :users
   end
   root :to => redirect('/participations')
+
 end
