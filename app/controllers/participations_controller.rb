@@ -3,11 +3,6 @@ class ParticipationsController < ApplicationController
         @participations = Participation.all
     end
     
-    def show
-        #id = params[:id]
-        @participation = Participation.find params[:id]
-    end
-    
     def new 
         @participation = Participation.new 
         # default: render 'new' template 
@@ -41,6 +36,6 @@ class ParticipationsController < ApplicationController
     def destroy
         @participation = Participation.find params[:id]
         @participation.destroy
-        redirect_to participation_path
+        redirect_to participations_path
     end
 end
