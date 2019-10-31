@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_09_26_024257) do
-=======
 ActiveRecord::Schema.define(version: 2019_10_24_195543) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
->>>>>>> 623e752d43b1e8d548081ad4b2a80ac0990ec42f
 
   create_table "groups", force: :cascade do |t|
     t.string "group_id"
@@ -28,11 +21,9 @@ ActiveRecord::Schema.define(version: 2019_10_24_195543) do
     t.string "group_name"
   end
 
-<<<<<<< HEAD
-=======
   create_table "participations", force: :cascade do |t|
-    t.bigint "group_id"
-    t.bigint "user_id"
+    t.integer "group_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_participations_on_group_id"
@@ -47,5 +38,4 @@ ActiveRecord::Schema.define(version: 2019_10_24_195543) do
     t.datetime "updated_at", null: false
   end
 
->>>>>>> 623e752d43b1e8d548081ad4b2a80ac0990ec42f
 end

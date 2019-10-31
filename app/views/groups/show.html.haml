@@ -1,10 +1,5 @@
 %h2 Details about #{@group.group_name}
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 623e752d43b1e8d548081ad4b2a80ac0990ec42f
 %ul#details
   %li
     Location:
@@ -13,12 +8,7 @@
     Members:
     = @group.members
 
-<<<<<<< HEAD
-= link_to 'Back to group list', groups_path
-=======
 
 = link_to 'Add members', new_participation_path(@group)
 %h3= link_to "Delete", @group, method: :delete, data: {confirm:"are you sure?"}
-= link_to 'Back to group list', groups_path
 //= submit_tag 'join group', add_group_path
->>>>>>> 623e752d43b1e8d548081ad4b2a80ac0990ec42f

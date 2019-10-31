@@ -1,17 +1,14 @@
 class GroupsController < ApplicationController
     def index
-        @groups = Group.all
+        @groups=Group.where(["group_name LIKE ?","%#{params[:search]}%"])
+        #@groups=Group.all
     end
 
     def show
         #id = params[:id]
         @group = Group.find params[:id]
     end
-<<<<<<< HEAD
 
-end
-=======
-    
     def new 
         @group = Group.new 
         # default: render 'new' template 
@@ -54,4 +51,3 @@ end
         redirect_to groups_path
     end
 end
->>>>>>> 623e752d43b1e8d548081ad4b2a80ac0990ec42f
