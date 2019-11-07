@@ -1,6 +1,7 @@
 %h1 All Participations
 %h3= link_to 'Add new participation', new_participation_path
-%table#participations
+%table{:class=>"table table-dark"}
+  #participations
   %thead
     %tr
       %th user_id
@@ -10,3 +11,5 @@
       %tr
         %td= participation.user_id
         %td= participation.group_id
+        %td= link_to "Edit", edit_participation_path(participation)
+        %td= link_to " Delete", participation_path(participation), method: :delete, data: {confirm:"are you sure?"}

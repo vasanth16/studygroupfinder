@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
     def index
-        @groups = Group.all
+        @groups=Group.where(["group_name LIKE ?","%#{params[:search]}%"])
+        #@groups=Group.all
     end
 
     def show
@@ -8,7 +9,7 @@ class GroupsController < ApplicationController
         @group = Group.find params[:id]
         @participations = Participation.where(:group_id => @group.group_id)
     end
-    
+
     def new 
         @group = Group.new 
         # default: render 'new' template 
@@ -16,7 +17,7 @@ class GroupsController < ApplicationController
 
     def create
         params.require(:group)
-        permitted = params[:group].permit(:group_id,:time,:location,:class_code, :group_name)
+        permitted = params[:group].permit(:group_id,:time,:location,:class_code,:group_name)
         @group = Group.create!(permitted)
         flash[:notice] = "#{@group.group_name} was successfully created." 
         redirect_to groups_path 
