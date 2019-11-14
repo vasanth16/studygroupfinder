@@ -1,4 +1,7 @@
-%h2 Edit Group #{@group.group_name}
+%html
+  %body{:class=>"show-bg"}
+
+%h2{:class=>"header"} Edit Group #{@group.group_name}
  
  
 = form_tag group_path(@group), :method => :patch do 

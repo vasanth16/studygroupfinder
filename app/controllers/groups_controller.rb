@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
     def index
-        @groups=Group.where(["group_name LIKE ?","%#{params[:search]}%"])
+        @groups=Group.where(["group_name LIKE ?","%#{params[:search]}%"]).order(:group_name)
         #@groups=Group.all
     end
 
