@@ -1,23 +1,23 @@
-%h1 All Groups
-%h3= link_to 'Add new group', new_group_path
-%table{:class=>"table table-dark"}
-  
+%div
+  %h1 All Groups
+  %h1= link_to 'Add New Group', new_group_path, class: "btn btn-primary"
+%table{:class=>"table table-striped table-dark table-hover"}
   #groups
   %thead
-    %tr
-      %th Group_id
-      %th Meet Time
+    %tr{:class=>"bg-primary"}
+      %th{:style=>"width: 25%"} Group Name
       %th Class Code
-      %th Group Name
+      %th Meet Time
+      %th
+      %th
+      // %th
   %tbody
     - @groups.each do |group|
-      %tr
-        %td= group.group_id 
-        %td= group.time
-        %td= group.class_code
+      %tr{:data-href=> "<%= group_path(group) %>"}
         %td= group.group_name
-        %td= link_to "More about #{group.group_name}", group_path(group)
-        %td= link_to "#{group.group_name}", group_path(group)
-        %td= link_to "Edit", edit_group_path(group)
-        %td= link_to " Delete", group_path(group), method: :delete, data: {confirm:"are you sure?"}
+        %td= group.class_code
+        %td= group.time
+        %td= link_to "More details", group_path(group), class: "a-custom"
+        %td= link_to "Edit", edit_group_path(group), class: "a-custom"
+        // %td= link_to " Delete", group_path(group), method: :delete, data: {confirm:"are you sure?"}, class: "a-custom"
 
