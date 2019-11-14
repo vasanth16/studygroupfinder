@@ -31,6 +31,6 @@ Devise.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
-  config.omniauth :google_oauth2, '536477294682-25rgd831b9hdknipm5cqugv7ctoungkl.apps.googleusercontent.com', '0NipF6H5MPzThKEJ_TfMRC7i', {scope: "userinfo.email, userinfo.name"}
+  config.omniauth :google_oauth2, '536477294682-25rgd831b9hdknipm5cqugv7ctoungkl.apps.googleusercontent.com', '0NipF6H5MPzThKEJ_TfMRC7i', {scope: "userinfo.email, userinfo.profile"}
 
 end
