@@ -38,7 +38,7 @@ more_users = [
     {:email => 'mydad@yahoo.com', :first_name => 'Mi', :last_name => 'Padre', :password => "something"},
     {:email => 'president@tulane.edu', :first_name => 'Mike', :last_name => 'Fitts', :password => "something"},
     {:email => 'tutonespresident@gmail.com', :first_name => 'TU Tones', :last_name => 'President', :password => "something"},
-    {:email => 'obama@whitehouse.gov', :first_name => 'Barack', :last_name => 'Obama', :password => "something", :password => "something"},
+    {:email => 'obama@whitehouse.gov', :first_name => 'Barack', :last_name => 'Obama', :password => "something"},
     {:email => 'captjack@gmail.com', :first_name => 'Jack', :last_name => 'Sparrow', :password => "something"},
     {:email => 'captjack2@gmail.co.uk', :first_name => 'Jack', :last_name => 'Harkness', :password => "something"},
     {:email => 'bpitt@tulane.edu', :first_name => 'Brad', :last_name => 'Pitt', :password => "something"},
