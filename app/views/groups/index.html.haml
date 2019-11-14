@@ -1,6 +1,7 @@
 %h1 All Groups
 %h3= link_to 'Add new group', new_group_path
 %table{:class=>"table table-dark"}
+  
   #groups
   %thead
     %tr
@@ -19,3 +20,4 @@
         %td= link_to "#{group.group_name}", group_path(group)
         %td= link_to "Edit", edit_group_path(group)
         %td= link_to " Delete", group_path(group), method: :delete, data: {confirm:"are you sure?"}
+
