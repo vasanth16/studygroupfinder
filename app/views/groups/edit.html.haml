@@ -4,22 +4,34 @@
 %h2{:class=>"header"} Edit Group #{@group.group_name}
  
  
-= form_tag group_path(@group), :method => :patch do 
- 
-  = label :group, :time, 'time' 
-  = text_field :group, :time
+%div{:class=>"a-custom list2"}
 
-  = label :group, :location, 'location' 
-  = text_field :group, :location
-
-  = label :group, :members, 'number of member' 
-  = text_field :group, :members
-
-  = label :group, :class_code, 'class code' 
-  = text_field :group, :class_code
-
-  = label :group, :group_name, 'name of the group' 
-  = text_field :group, :group_name
- 
-  = submit_tag 'Save Changes' 
-  = link_to 'Back to group list', groups_path
+  = form_tag group_path(@group), :method => :patch do 
+   
+    = label :group, :time, 'time' 
+    = text_field :group, :time
+    
+    %div
+  
+    = label :group, :location, 'location' 
+    = text_field :group, :location
+    
+    %div
+  
+    = label :group, :members, 'number of member' 
+    = text_field :group, :members
+    
+    %div
+  
+    = label :group, :class_code, 'class code' 
+    = text_field :group, :class_code
+    
+    %div
+  
+    = label :group, :group_name, 'name of the group' 
+    = text_field :group, :group_name
+    
+    %div
+   
+    = submit_tag 'Save Changes' 
+    = link_to 'Back to group list', groups_path, class: "a-custom"

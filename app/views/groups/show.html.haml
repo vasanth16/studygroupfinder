@@ -1,19 +1,7 @@
 %html
   %body{:class=>"show-bg"}
 
-
-%ul#details
-  %li
-    Location:
-    = @group.location
-  %li
-    Members:
-
-    %table#participations
-      %tbody
-        - @participations.each do |participation|
-          %tr
-            %td= participation.user_id
+%h2{:class=>"header"} Details about #{@group.group_name}
 
 %h4{:class=>"description"} 
   Location: 
