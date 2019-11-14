@@ -1,0 +1,16 @@
+%html
+  %body{:class=>"show-bg"}
+
+%h2{:class=>"header"} Edit Participation #{@participation.group_id}
+ 
+ 
+= form_tag participation_path(@participation), :method => :patch do 
+ 
+  = label :participation, :group_id, 'group_id' 
+  = text_field :participation, :group_id
+
+  = label :participation, :user_id, 'user_id' 
+  = text_field :participation, :user_id
+ 
+  = submit_tag 'Save Changes' 
+  = link_to 'Back to participation list', participations_path

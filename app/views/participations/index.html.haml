@@ -1,12 +1,17 @@
 %h1 All Participations
 %h3= link_to 'Add new participation', new_participation_path
-%table#participations
+%table{:class=>"table table-striped table-dark table-hover"}
+  #participations
   %thead
-    %tr
+    %tr{:class=>"bg-primary"}
       %th user_id
       %th group_id
+      %th
+      %th
   %tbody
     - @participations.each do |participation|
       %tr
         %td= participation.user_id
         %td= participation.group_id
+        %td= link_to "Edit", edit_participation_path(participation), class: "a-custom"
+        %td= link_to " Delete", participation_path(participation), method: :delete, data: {confirm:"are you sure?"}, class: "a-custom"
