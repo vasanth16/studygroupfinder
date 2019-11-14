@@ -1,4 +1,7 @@
-%h2 Edit Participation #{@participation.group_id}
+%html
+  %body{:class=>"show-bg"}
+
+%h2{:class=>"header"} Edit Participation #{@participation.group_id}
  
  
 = form_tag participation_path(@participation), :method => :patch do 
