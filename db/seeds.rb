@@ -28,26 +28,26 @@ end
 
 
 more_users = [
-    {:email => 'abc@test.com', :first_name => 'John', :last_name => 'Appleseed'},
-    {:email => 'kimmy23@gmail.com', :first_name => 'Kim', :last_name => 'Possible'},
-    {:email => 'bruh@yahoo.com', :first_name => 'Bruh', :last_name => 'Bruh'},
-    {:email => 'rufusfan@gmail.com', :first_name => 'Ron', :last_name => 'Stoppable'},
-    {:email => 'abuck2@tulane.edu', :first_name => 'Alex', :last_name => 'Buck'},
-    {:email => 'thewalrus@hotmail.com', :first_name => 'Kookoo', :last_name => 'Kachoo'},
-    {:email => 'octopussgarden@beatles.co.uk', :first_name => 'Ringo', :last_name => 'Starr'},
-    {:email => 'mydad@yahoo.com', :first_name => 'Mi', :last_name => 'Padre'},
-    {:email => 'president@tulane.edu', :first_name => 'Mike', :last_name => 'Fitts'},
-    {:email => 'tutonespresident@gmail.com', :first_name => 'TU Tones', :last_name => 'President'},
-    {:email => 'obama@whitehouse.gov', :first_name => 'Barack', :last_name => 'Obama'},
-    {:email => 'captjack@gmail.com', :first_name => 'Jack', :last_name => 'Sparrow'},
-    {:email => 'captjack2@gmail.co.uk', :first_name => 'Jack', :last_name => 'Harkness'},
-    {:email => 'bpitt@tulane.edu', :first_name => 'Brad', :last_name => 'Pitt'},
-    {:email => 'thelib@tulane.edu', :first_name => 'Howard', :last_name => 'Tilton'},
-    {:email => 'bestdorm@tulane.edu', :first_name => 'Lallage Feazel', :last_name => 'Wall'},
-    {:email => 'genericuser@yahoo.com', :first_name => 'Firstname', :last_name => 'Lastname'},
-    {:email => 'badperson@hotmail.com', :first_name => 'Christopher', :last_name => 'Columbus'},
-    {:email => 'ogprez@whitehouse.gov', :first_name => 'George', :last_name => 'Washington'},
-    {:email => 'akurdia@tulane.edu', :first_name => 'Anastasia', :last_name => 'Kurdia'}
+    {:email => 'abc@test.com', :first_name => 'John', :last_name => 'Appleseed', :password => "something"},
+    {:email => 'kimmy23@gmail.com', :first_name => 'Kim', :last_name => 'Possible', :password => "something"},
+    {:email => 'bruh@yahoo.com', :first_name => 'Bruh', :last_name => 'Bruh', :password => "something"},
+    {:email => 'rufusfan@gmail.com', :first_name => 'Ron', :last_name => 'Stoppable', :password => "something"},
+    {:email => 'abuck2@tulane.edu', :first_name => 'Alex', :last_name => 'Buck', :password => "something"},
+    {:email => 'thewalrus@hotmail.com', :first_name => 'Kookoo', :last_name => 'Kachoo', :password => "something"},
+    {:email => 'octopussgarden@beatles.co.uk', :first_name => 'Ringo', :last_name => 'Starr', :password => "something"},
+    {:email => 'mydad@yahoo.com', :first_name => 'Mi', :last_name => 'Padre', :password => "something"},
+    {:email => 'president@tulane.edu', :first_name => 'Mike', :last_name => 'Fitts', :password => "something"},
+    {:email => 'tutonespresident@gmail.com', :first_name => 'TU Tones', :last_name => 'President', :password => "something"},
+    {:email => 'obama@whitehouse.gov', :first_name => 'Barack', :last_name => 'Obama', :password => "something"},
+    {:email => 'captjack@gmail.com', :first_name => 'Jack', :last_name => 'Sparrow', :password => "something"},
+    {:email => 'captjack2@gmail.co.uk', :first_name => 'Jack', :last_name => 'Harkness', :password => "something"},
+    {:email => 'bpitt@tulane.edu', :first_name => 'Brad', :last_name => 'Pitt', :password => "something"},
+    {:email => 'thelib@tulane.edu', :first_name => 'Howard', :last_name => 'Tilton', :password => "something"},
+    {:email => 'bestdorm@tulane.edu', :first_name => 'Lallage Feazel', :last_name => 'Wall', :password => "something"},
+    {:email => 'genericuser@yahoo.com', :first_name => 'Firstname', :last_name => 'Lastname', :password => "something"},
+    {:email => 'badperson@hotmail.com', :first_name => 'Christopher', :last_name => 'Columbus', :password => "something"},
+    {:email => 'ogprez@whitehouse.gov', :first_name => 'George', :last_name => 'Washington', :password => "something"},
+    {:email => 'akurdia@tulane.edu', :first_name => 'Anastasia', :last_name => 'Kurdia', :password => "something"}
 ]
 
 more_users.each do |user|
