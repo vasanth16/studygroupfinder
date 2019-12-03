@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'welcome/new'
   #devise_for :users
   # Routes for Google authentication
 
