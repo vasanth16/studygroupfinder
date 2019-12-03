@@ -2,14 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body { 
+  background-color: black;
+}
 
-.center-screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  display: block;
+  background-image: url(/assets/studygroup.jpg);
+  width: 1200px;
+  height: 800px;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+p {
   text-align: center;
-  min-height: 100vh;
 }
 
 .container {
@@ -18,7 +45,8 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 15em;
+    margin-top: 11em;
+    filter: blur(none) !important;
 }
 
 .justify-content-center {
