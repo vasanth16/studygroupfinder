@@ -32,6 +32,6 @@
     = text_field :group, :group_name
     
     %div
-   
-    = submit_tag 'Save Changes' 
-    = link_to 'Back to group list', groups_path, class: "a-custom"
+    %button.btn.btn-lg.btn-primary{:type => "submit_tag", :value => "submit_tag"} Save Changes
+    &nbsp&nbsp&nbsp       &emsp;
+    %a.btn.btn-lg.btn-danger{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
