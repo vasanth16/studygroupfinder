@@ -1,4 +1,21 @@
-<h1>Welcome#new</h1>
+<!--<h1>Welcome#new</h1>-->
 
-<%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
-<p>Find me in app/views/welcome/new.html.erb</p>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="card border-primary mb-3" style="width: 36rem; height: 25rem;">
+      <div class="card-body">
+        Welcome to StudyGroupFinder! Sign in below to start studying!
+        <div class="row justify-content-center"> 
+          <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: "btn btn-primary a-custom2" %> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
