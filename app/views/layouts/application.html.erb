@@ -10,8 +10,10 @@
   </head>
 
   <body>
-    <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
-    <%= render 'layouts/navbar' %>
+    <!--<%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>-->
+    <% unless controller_name == "welcome" %>
+      <%= render 'layouts/navbar' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

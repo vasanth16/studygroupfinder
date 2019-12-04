@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'welcome/new'
   #devise_for :users
   # Routes for Google authentication
 
   devise_for :users, controllers: { :omniauth_callbacks => 'omniauth_callbacks' }
 
   
-
+  root :to => redirect('/welcome/new#index')
 
   resources :user2s
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
