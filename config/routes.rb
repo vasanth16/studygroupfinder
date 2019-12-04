@@ -6,7 +6,8 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { :omniauth_callbacks => 'omniauth_callbacks' }
 
-  
+  #match "/auth/google_oauth2/callback" => "sessions#create"
+
   root :to => redirect('/welcome/new#index')
 
   resources :user2s
