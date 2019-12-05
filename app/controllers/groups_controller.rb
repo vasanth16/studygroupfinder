@@ -6,6 +6,7 @@ class GroupsController < ApplicationController
     
     def mygroups
         @groups=Group.where(Participation.where(:user_id => current_user.id))
+        puts current_user.id
     end
 
     def show
