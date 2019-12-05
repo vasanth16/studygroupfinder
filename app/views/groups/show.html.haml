@@ -12,10 +12,7 @@
     %tbody
       - @participations.each do |participation|
         %tr
-          -@u = User.where(:id => participation.user_id)
-          -@u.each do |u|
-            %tr
-              %td= u.email
+          %td= participation.user_id
 
 
 -# %button{:class=>"button"} Join! = create_participation_path
