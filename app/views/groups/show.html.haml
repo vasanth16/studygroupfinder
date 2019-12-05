@@ -1,22 +1,19 @@
 %html
-  %body{:class=>"show-bg"}
-
+  %body
 %h2{:class=>"header"} Details about #{@group.group_name}
-
-%h4{:class=>"description"} 
-  Location: 
+%h4{:class=>"description text-success"}
+  Location:
   =@group.location
-%h4{:class=>"description"}
+%h4{:class=>"description text-success"}
   Members
   %table#participations{:class=>"list"}
     %tbody
       - @participations.each do |participation|
         %tr
           %td= participation.user_id
-
-
--# %button{:class=>"button"} Join! = create_participation_path
-=link_to 'Join',  new_participation_path(@group, "idd" => @group.group_id), class: "button"
--# %h6= link_to 'Add Member', new_participation_path(@group), class: "show"
-%h5= link_to "Delete Group", @group, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
+%div
+&emsp;
+%a.btn.btn-lg.btn-primary{:href => new_participation_path(@group),:role => "button"} Add Member
+&nbsp&nbsp&nbsp       &emsp;
+%h5= link_to "Delete Group", @channel, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
 //= submit_tag 'join group', add_group_path
