@@ -15,7 +15,7 @@ class ParticipationsController < ApplicationController
             Participation.create!({:group_id => params[:idd], :user_id => current_user.id})
         #default: render 'create' template
         #flash[:notice] = "Participation was successfully created." 
-            redirect_to participations_path 
+            redirect_to mygroups_path 
         #params.require(:participation)
         #permitted = params[:participation].permit(:group_id,:user_id)
         end
