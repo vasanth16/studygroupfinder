@@ -21,12 +21,10 @@ Rails.application.routes.draw do
   resources :participations do
     resources :groups
     resources :users
+    get '/button', to: 'participation#button', as: 'button'
   end
   root :to => redirect('/participations')
   
-
- 
-
 
 
 
