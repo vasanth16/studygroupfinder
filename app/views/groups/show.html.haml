@@ -10,10 +10,14 @@
     %tbody
       - @participations.each do |participation|
         %tr
-          %td= participation.user_id
-%div
-&emsp;
-%a.btn.btn-lg.btn-primary{:href => new_participation_path(@group),:role => "button"} Add Member
-&nbsp&nbsp&nbsp       &emsp;
-%h5= link_to "Delete Group", @channel, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
+          -@u = User.where(:id => participation.user_id)
+          -@u.each do |u|
+            %tr
+              %td= u.email
+
+
+-# %button{:class=>"button"} Join! = create_participation_path
+%button=link_to 'Join',  new_participation_path(@group, "idd" => @group.group_id), class: "button"
+-# %h6= link_to 'Add Member', new_participation_path(@group), class: "show"
+%h5= link_to "Delete Group", @group, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
 //= submit_tag 'join group', add_group_path
