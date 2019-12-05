@@ -14,6 +14,9 @@
         %tr
           %td= participation.user_id
 
-%h6= link_to 'Add Member', new_participation_path(@group), class: "show"
+
+-# %button{:class=>"button"} Join! = create_participation_path
+=link_to 'Join',  new_participation_path(@group, "idd" => @group.group_id), class: "button"
+-# %h6= link_to 'Add Member', new_participation_path(@group), class: "show"
 %h5= link_to "Delete Group", @group, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
 //= submit_tag 'join group', add_group_path

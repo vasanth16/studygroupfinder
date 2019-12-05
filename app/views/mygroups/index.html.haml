@@ -1,0 +1,21 @@
+%div
+  %h1 My Groups  
+  = link_to 'Add New Group', new_group_path, class: "btn btn-outline-primary"
+  %script{:src => "js/jquery.js"}
+  .mb-4.item-box.event-box
+    .item-content.mb-4
+      .row 
+        - @groups.each do |group|
+          .col-10.col-md-4.mb-2
+            .card{:style => "min-width: 24rem;"}
+              .card-body.text-danger
+                %h5.card-title 
+                  =link_to group.group_name, group_path(group), class: "a-custom"
+                %p.card-text 
+                  Class code:
+                  =group.class_code
+                %p.card-text
+                  Starting time:
+                  =group.time
+                  =link_to "Edit", edit_group_path(group), class: "a-custom"
+    
