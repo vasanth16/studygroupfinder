@@ -1,22 +1,27 @@
 %html
   %body{:class=>"show-bg"}
 
-%h2 Join Group
+%h1 Joined!
 
--#=form_for :group, groups_path do |f|
--#  if @group.errors.any?
--#    @group.errors.full_messages.each do |msg|
--#      =msg
--#    end
--#  end
   
-= form_tag participations_path, :method => :post do 
- 
-  = label :participation, :group_id, 'group_id'
-  = text_field :participation, :group_id
 
-  = label :participation, :user_id, 'user_id'
-  = text_field :participation, :user_id
+  
+-# %h2 Join Group
+
+-# -#=form_for :group, groups_path do |f|
+-# -#  if @group.errors.any?
+-# -#    @group.errors.full_messages.each do |msg|
+-# -#      =msg
+-# -#    end
+-# -#  end
+  
+-# = form_tag participations_path, :method => :post do 
  
-  = submit_tag 'Join!' 
+-#   = label :participation, :group_id, 'group_id'
+-#   = text_field :participation, :group_id
+
+-#   = label :participation, :user_id, 'user_id'
+-#   = text_field :participation, :user_id
+ 
+-#   = submit_tag 'Join!' 
   

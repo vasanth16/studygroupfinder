@@ -5,17 +5,25 @@ class ParticipationsController < ApplicationController
     
     def new 
        
-        #@participation = Participation.new 
-        # default: render 'new' template 
+        @participation = Participation.new 
+        # default: render 'new' template
+        if user_signed_in? 
+            @user = current_user
+            puts @user.id
+            puts params[:idd]
+        
+            Participation.create!({:group_id => params[:idd], :user_id => current_user.id})
+        #default: render 'create' template
+        #flash[:notice] = "Participation was successfully created." 
+            redirect_to participations_path 
+        #params.require(:participation)
+        #permitted = params[:participation].permit(:group_id,:user_id)
+        end
+        
+        
     end  
     
     def create
-        @user = current_user
-        @participation = Participation.create!({:group_id => 2, :user_id => 21})
-        #flash[:notice] = "Participation was successfully created." 
-        redirect_to participations_path 
-        #params.require(:participation)
-        #permitted = params[:participation].permit(:group_id,:user_id)
         
     end
     
