@@ -1,5 +1,5 @@
 <!DOCTYPE html><%= favicon_link_tag asset_path('icon.ico') %>
-<html>
+<html lang="en">
   <head>
     <title>Groupfinder</title>
     <%= csrf_meta_tags %>
@@ -10,8 +10,15 @@
   </head>
 
   <body>
-    <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
+  <% unless controller_name == "welcome" %>
     <%= render 'layouts/navbar' %>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <h3 align="center"> Welcome <%= current_user.first_name %>! </h3>
+      
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>

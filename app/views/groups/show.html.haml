@@ -3,12 +3,6 @@
 
 %h2{:class=>"header"} Details about #{@group.group_name}
 
-<<<<<<< HEAD
-
-= link_to 'Add members', new_participation_path(@group)
-%h3= link_to "Delete", @group, method: :delete, data: {confirm:"are you sure?"}
-//= submit_tag 'join group', add_group_path
-=======
 %h4{:class=>"description"} 
   Location: 
   =@group.location
@@ -20,7 +14,9 @@
         %tr
           %td= participation.user_id
 
-%h6= link_to 'Add Member', new_participation_path(@group), class: "show"
+
+-# %button{:class=>"button"} Join! = create_participation_path
+=link_to 'Join',  new_participation_path(@group, "idd" => @group.group_id), class: "button"
+-# %h6= link_to 'Add Member', new_participation_path(@group), class: "show"
 %h5= link_to "Delete Group", @group, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
 //= submit_tag 'join group', add_group_path
->>>>>>> 875f1c4a0db94f3ff4fc0f6725e03d7cf389529b
