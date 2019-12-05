@@ -3,6 +3,10 @@ class GroupsController < ApplicationController
         @groups=Group.where(["group_name LIKE ?","%#{params[:search]}%"]).order(:group_name)
         #@groups=Group.all
     end
+    
+    def mygroups
+        @groups=Group.where(Participation.where(:user_id => current_user.id))
+    end
 
     def show
         #id = params[:id]

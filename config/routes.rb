@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resources :groups 
   root :to => redirect('/groups')
   
+  root :to => redirect('/groups/mygroups')
+  
   resources :users 
   root :to => redirect('/users')
   
