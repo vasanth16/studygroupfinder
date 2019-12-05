@@ -1,12 +1,10 @@
 %html
-  %body{:class=>"show-bg"}
-
+  %body
 %h2{:class=>"header"} Details about #{@group.group_name}
-
-%h4{:class=>"description"} 
-  Location: 
+%h4{:class=>"description text-success"}
+  Location:
   =@group.location
-%h4{:class=>"description"}
+%h4{:class=>"description text-success"}
   Members
   %table#participations{:class=>"list"}
     %tbody
