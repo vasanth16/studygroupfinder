@@ -1,21 +1,134 @@
-%div
-  %h1 All Groups  
-  = link_to 'Add New Group', new_group_path, class: "btn btn-outline-primary"
-  %script{:src => "js/jquery.js"}
-  .mb-4.item-box.event-box
-    .item-content.mb-4
-      .row 
-        - @groups.each do |group|
-          .col-10.col-md-4.mb-2
-            .card{:style => "min-width: 24rem;"}
-              .card-body.text-danger
-                %h5.card-title 
-                  =link_to group.group_name, group_path(group), class: "a-custom"
-                %p.card-text 
-                  Class code:
-                  =group.class_code
-                %p.card-text
-                  Starting time:
-                  =group.time
-                  =link_to "Edit", edit_group_path(group), class: "a-custom"
-    
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  :css
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        padding-top: 200px;
+        padding-bottom: 300px;
+        width: 100%;
+        height:  100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        text-align: center;
+    }
+    .modal-content {
+        background-color: #FEFEFE;
+        margin: auto;
+        padding: 200px auto;
+        width: 400px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+    @-webkit-keyframes animatetop {
+        from {top:-200px; opacity:0}
+        to {top:0; opacity:1}
+    }
+    @keyframes animatetop {
+        from {top:-200px; opacity:0}
+        to {top:0; opacity:1}
+    }
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover, .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .modal-header {
+    	display: block;
+    	line-height: 30px;
+        padding: 2px 10px;
+        background-color: blue;
+        color: white;
+        text-align: left;
+    }
+    .modal-body {
+    	padding: 2px 16px;
+    	font-size: 18px;
+    	height: 200px;
+    }
+    .modal-footer {
+    	display: block;
+    	line-height: 30px;
+        padding: 2px 10px;
+        background-color: blue;
+        color: white;
+    }
+  / js
+  :javascript
+    function openwindow(){
+    	var modal = document.getElementById('myModal');
+    	var span = document.getElementsByClassName("close")[0];
+    	var ok=document.getElementsByClassName("ok")[0];
+    	var no=document.getElementsByClassName("no")[0];
+    	modal.style.display = "block";
+    	ok.onclick=function(){
+    		alert("are you sure?");
+    		modal.style.display = "none";
+    	}
+    	no.onclick=function(){
+    		modal.style.display = "none";
+    	}
+    	span.onclick = function() {
+    		modal.style.display = "none";
+    	}
+    	window.onclick = function(event) {
+    		if (event.target == modal) modal.style.display = "none";
+    	}
+    }
+  %body
+    %div{:align => "center", :style => "margin: 50 auto"}
+      %button{:onclick => "openwindow()"} Create New Group
+    #myModal.modal
+      .modal-content
+        .modal-header
+          %h1 New Group
+        .modal-body
+          = form_tag groups_path, :method => :post do
+            = label :group, :time, 'Time'
+            = text_field :group, :time
+            %br/
+            = label :group, :location, 'Location'
+            = text_field :group, :location
+            %br/
+            = label :group, :class_code, 'Class Code'
+            = text_field :group, :class_code
+            %br/
+            = label :group, :group_name, 'Group Name'
+            = text_field :group, :group_name
+            %br/
+            = submit_tag 'Save Changes'
+             
+            %a.btn{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
+    %h2 All Groups
+    .mb-4.item-box.event-box
+      .item-content.mb-4
+        .row
+          - @groups.each do |group|
+            .col-10.col-md-4.mb-2
+              .card{:style => "min-width: 24rem;"}
+                .card-body.text-danger
+                  %h3.card-title
+                    =link_to group.group_name, group_path(group), class: "a-custom"
+                  %p.card-text
+                    Class code:
+                    =group.class_code
+                  %p.card-text
+                    Starting time:
+                    =group.time
+                    -# =link_to "Edit", edit_group_path(group), class: "a-custom"
+                    -# =link_to "new", new_group_path, class: "a-custom"
