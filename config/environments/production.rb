@@ -91,6 +91,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+<<<<<<< HEAD
   config.action_mailer.delivery_method = :sendmail
 # Defaults to:
 # config.action_mailer.sendmail_settings = {
@@ -109,4 +110,9 @@ Rails.application.configure do
     :authentication => :plain,
     :enable_starttls_auto => true
   }
+=======
+  
+  config.assets.compile = true
+  config.assets.digest = true
+>>>>>>> Potential fix for picture not showing up
 end
