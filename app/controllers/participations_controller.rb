@@ -1,4 +1,5 @@
 class ParticipationsController < ApplicationController
+    require 'mail'
     def index
         @participations = Participation.all
     end
@@ -11,8 +12,24 @@ class ParticipationsController < ApplicationController
             @user = current_user
             puts @user.id
             puts params[:idd]
+            puts params[:name]
+            @g = Group.where(:id => params[:idd])
+            @name = ""
+            @g.each do |g|
+                @name = g.group_name
+            end
+            puts @name
+
         
             Participation.create!({:group_id => params[:idd], :user_id => current_user.id})
+            UserMailer.with(user: @user, name: @name ).welcome_email.deliver_now
+            # mail = Mail.new do
+            #     from    'vasanthrajvr@gmail.com'
+            #     to      'vasanthrajvr@gmail.com'
+            #     subject 'This is a test email'
+            #     body    'Wassssaaaappppppp'
+            # end
+            # mail.deliver!
         #default: render 'create' template
         #flash[:notice] = "Participation was successfully created." 
             redirect_to mygroups_path 
