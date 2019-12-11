@@ -37,7 +37,7 @@ more_users = [
     {:email => 'octopussgarden@beatles.co.uk', :first_name => 'Ringo', :last_name => 'Starr', :password => "something"},
     {:email => 'mydad@yahoo.com', :first_name => 'Mi', :last_name => 'Padre', :password => "something"},
     {:email => 'president@tulane.edu', :first_name => 'Mike', :last_name => 'Fitts', :password => "something"},
-    {:email => 'tutonespresident@gmail.com', :first_name => 'TU Tones', :last_name => 'President', :password => "something"},
+    {:email => 'hdywtdt@gmail.com', :first_name => 'Matthew', :last_name => 'Mercer', :password => "something"},
     {:email => 'obama@whitehouse.gov', :first_name => 'Barack', :last_name => 'Obama', :password => "something"},
     {:email => 'captjack@gmail.com', :first_name => 'Jack', :last_name => 'Sparrow', :password => "something"},
     {:email => 'captjack2@gmail.co.uk', :first_name => 'Jack', :last_name => 'Harkness', :password => "something"},
@@ -47,7 +47,7 @@ more_users = [
     {:email => 'genericuser@yahoo.com', :first_name => 'Firstname', :last_name => 'Lastname', :password => "something"},
     {:email => 'badperson@hotmail.com', :first_name => 'Christopher', :last_name => 'Columbus', :password => "something"},
     {:email => 'ogprez@whitehouse.gov', :first_name => 'George', :last_name => 'Washington', :password => "something"},
-    {:email => 'akurdia@tulane.edu', :first_name => 'Anastasia', :last_name => 'Kurdia', :password => "something"}
+    {:email => 'creativename@tulane.edu', :first_name => 'Imoutta', :last_name => 'Ideas', :password => "something"}
 ]
 
 more_users.each do |user|
