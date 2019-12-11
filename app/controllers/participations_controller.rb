@@ -10,10 +10,7 @@ class ParticipationsController < ApplicationController
         # default: render 'new' template
         if user_signed_in? 
             @user = current_user
-            puts @user.id
-            puts params[:idd]
-            puts params[:name]
-            @g = Group.where(:id => params[:idd])
+            @g = Group.where(:id => params[:id])
             @name = ""
             @g.each do |g|
                 @name = g.group_name
@@ -21,7 +18,7 @@ class ParticipationsController < ApplicationController
             puts @name
 
         
-            Participation.create!({:group_id => params[:idd], :user_id => current_user.id})
+            Participation.create!({:group_id => params[:id], :user_id => current_user.id})
             UserMailer.with(user: @user, name: @name ).welcome_email.deliver_now
             # mail = Mail.new do
             #     from    'vasanthrajvr@gmail.com'

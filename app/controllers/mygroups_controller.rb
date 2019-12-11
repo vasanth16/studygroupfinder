@@ -9,7 +9,7 @@ class MygroupsController < ApplicationController
             @participations= Participation.where(:user_id => @user.id)
             @participations.each do |participations|
                 puts "____________"
-                @group = Group.where(:group_id => participations.group_id)
+                @group = Group.where(:id => participations.group_id)
                 @group.each do |group|
                     @mygroups.append(group)
                 end

@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2019_11_14_051908) do
 
   create_table "groups", force: :cascade do |t|
-    t.string "group_id"
     t.string "time"
     t.string "location"
     t.string "members"
