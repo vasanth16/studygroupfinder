@@ -22,8 +22,8 @@
     <form class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
-          <li></li><a class="navbar-brand" href="/"><%= current_user.first_name %></a></li>
-          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <li><a class="nav-link" href="/">Hi <%= current_user.first_name %></a></li>
+          <li class="nav-item active"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
         <% else %>
           <li><a class="nav-link" href="/welcome/new"><span class="sr-only"></span> Login </a></li>
         <% end %>
