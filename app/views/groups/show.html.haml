@@ -15,9 +15,9 @@
             %tr
               %td= u.email
 
-
--# %button{:class=>"button"} Join! = create_participation_path
-%button=link_to 'Join',  new_participation_path(@group, "idd" => @group.group_id, "name" => @group.group_name), class: "button"
--# %h6= link_to 'Add Member', new_participation_path(@group), class: "show"
-%h5= link_to "Delete Group", @group, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
+%div
+&emsp;
+%a.btn.btn-lg.btn-primary{:href => new_participation_path(@group, "idd" => @group.group_id),:role => "button"} Join Group
+&nbsp&nbsp&nbsp       &emsp;
+%h5= link_to "Delete Group", @channel, method: :delete, data: {confirm:"Are you sure?"}, class: "show-delete"
 //= submit_tag 'join group', add_group_path
