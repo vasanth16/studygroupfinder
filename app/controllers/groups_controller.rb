@@ -1,8 +1,22 @@
 class GroupsController < ApplicationController
+    require 'mail'
     def index
         @groups=Group.where(["group_name LIKE ?","%#{params[:search]}%"]).order(:group_name)
        
         #@groups=Group.all
+    end
+    
+    def mail
+        if user_signed_in? 
+            @user = current_user
+            mail = Mail.new do
+                from    current_user.email
+                to      current_user.email
+                subject 'This is a test email'
+                body    'Wassssaaaappppppp'
+            end
+            mail.deliver!
+        end
     end
     
     def mygroups
