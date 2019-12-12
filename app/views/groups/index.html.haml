@@ -89,6 +89,18 @@ s!!!
     .a-custom2:visted {
       color: black;
     }
+    a.custom-card{
+      color: #007bff;
+    }
+    a.custom-card:hover {
+      font-weight:bold;
+    }
+    .card-body {
+      padding: 2rem;
+    }
+    .card-text-2{
+      color: red;
+    }
     ::-webkit-input-placeholder {
        font-style: italic;
     }
@@ -161,15 +173,26 @@ s!!!
         .row
           - @groups.each do |group|
             .col-10.col-md-4.mb-2
-              .card{:style => "min-width: 24rem;"}
-                .card-body.text-danger
-                  %h3.card-title
-                    =link_to group.group_name, group_path(group), class: "a-custom"
-                  %p.card-text
-                    Class code:
-                    =group.class_code
-                  %p.card-text
-                    Starting time:
-                    =group.time
-                    -# =link_to "Edit", edit_group_path(group), class: "a-custom"
-                    -# =link_to "new", new_group_path, class: "a-custom"
+              %a.custom-card{href: group_path(group)}
+                .card{style: "min-width: 24rem;"}
+                  .card-body
+                    %h5.card-title #{group.group_name}
+                    %p.card-text-2
+                      Class code:
+                      =group.class_code
+                    %p.card-text-2
+                      Starting time:
+                      =group.time
+                  // %a{ :href => group_path(group), :class => "card"}
+                  //   %div
+                  //     .card{:style => "min-width: 24rem;", :class => "card-hover"}
+                  //       .card-body.text-danger
+                  //         %h3.card-title
+                  //           =link_to group.group_name, group_path(group), class: "a-custom"
+                  //         %p.card-text
+                  //           Class code:
+                  //           =group.class_code
+                  //         %p.card-text
+                  //           Starting time:
+                  //           =group.time
+    
