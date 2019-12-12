@@ -1,4 +1,3 @@
-s!!!
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -164,21 +163,8 @@ s!!!
               %br/
             = submit_tag 'Create!', class: 'btn btn-primary'
              
-            %a.btn{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
-    %h2{:style=>"text-align: center;"} All Groups
-    %headerS{:class => "left",:style=>"font-size:20px;"}
-      %button.btn.btn-primary{:onclick => "openwindow()",:style=>"font-size:20px; background-color:#1053FE;"} Create New Group
-    %headerS{:class => "right", :style => "margin: 50 auto; font-size:20px;"}
-      = form_tag groups_path, :style => "float: right", :method=>'get' do
-        = text_field_tag :search, params[:search]
-        = submit_tag "Search"
-    <br></br>
-=======
-              = submit_tag 'Create!', class: 'btn btn-primary'
-             
             -# %a.btn{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
     %h2 All Groups
->>>>>>> 1fa9852785033f342c3e1b3c831a6b5b64da080d
     .mb-4.item-box.event-box
       .item-content.mb-4
         .row
