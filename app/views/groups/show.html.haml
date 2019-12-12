@@ -30,7 +30,7 @@
     &nbsp&nbsp&nbsp       &emsp;
     %button=link_to 'Join',  new_participation_path(@group, "id" => @group.id, "name" => @group.group_name), class: "button"
   - else
-    %button=link_to 'Leave Group', edit_participation_path(@k, "id" => @k.id), data: {confirm:"are you sure?"}, class: "show-delete"
+    %button=link_to 'Leave Group', edit_participation_path(@k, "id" => @k.id), data: {confirm:"Are you sure?"}, class: "show-delete"
     -# %button=link_to 'Leave Group', {controller: "participations", method: :delete, id: @k.id}, data: {confirm:"are you sure?"}, class: "show-delete"
 -# %h6= link_to 'Add Member', new_participation_path(@group), class: "show"
 
