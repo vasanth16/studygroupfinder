@@ -1,4 +1,3 @@
-s!!!
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -137,8 +136,6 @@ s!!!
     	}
     }
   %body
-    %div{:align => "center", :style => "margin: 50 auto"}
-      %button{:onclick => "openwindow()"} Create New Group
     #myModal.modal
       .modal-content
         .modal-header
@@ -164,7 +161,7 @@ s!!!
                 = label :group, :time, 'Time'
               = text_field :group, :time, placeholder: "e.g. 5:30am"
               %br/
-              = submit_tag 'Create!', class: 'btn btn-primary'
+            = submit_tag 'Create!', class: 'btn btn-primary'
              
             -# %a.btn{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
     %h2 All Groups

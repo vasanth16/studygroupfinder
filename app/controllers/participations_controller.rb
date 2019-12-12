@@ -65,7 +65,10 @@ class ParticipationsController < ApplicationController
     end
     
     def edit
+        puts 'HI'
         @participation = Participation.find params[:id]
+        @participation.destroy
+        redirect_to mygroups_path
     end
     
     def update
@@ -83,7 +86,8 @@ class ParticipationsController < ApplicationController
     
     def destroy
         @participation = Participation.find params[:id]
+        puts 'HI'
         @participation.destroy
-        redirect_to participations_path
+        redirect_to mygroups_path
     end
 end
