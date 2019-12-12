@@ -1,4 +1,4 @@
-!!!
+s!!!
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -22,7 +22,8 @@
         background-color: #FEFEFE;
         margin: auto;
         padding: 200px auto;
-        width: 400px;
+        width: 600px;
+        height: 375px
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
         -webkit-animation-name: animatetop;
         -webkit-animation-duration: 0.4s;
@@ -49,17 +50,34 @@
         cursor: pointer;
     }
     .modal-header {
-    	display: block;
+    // 	display: inline-block;
     	line-height: 30px;
-        padding: 2px 10px;
-        background-color: blue;
+        padding: 8px 10px;
+        background-color: #007bff;
         color: white;
         text-align: left;
     }
+    .modal-header right{
+      margin-right: 12px;
+      margin-top: 3px;
+      
+    }
     .modal-body {
+      margin-top: 2em;
+      margin-bottom: 2em;
     	padding: 2px 16px;
     	font-size: 18px;
-    	height: 200px;
+    	height: 240px;
+    }
+    .modal-body form{
+      margin-right: 4em;
+      margin-bottom: 0.8em;
+    }
+    .modal-body label {
+      margin-right: 10px;
+      display: inline-block;
+      width: 140px;
+      text-align: right; 
     }
     .modal-footer {
     	display: block;
@@ -67,6 +85,22 @@
         padding: 2px 10px;
         background-color: blue;
         color: white;
+    }
+    .a-custom2:visted {
+      color: black;
+    }
+    ::-webkit-input-placeholder {
+       font-style: italic;
+    }
+    :-moz-placeholder {
+       font-style: italic;  
+    }
+    ::-moz-placeholder {
+       font-style: italic;  
+    }
+    :-ms-input-placeholder {  
+       font-style: italic; 
+    }
     }
   / js
   :javascript
@@ -94,7 +128,9 @@
     #myModal.modal
       .modal-content
         .modal-header
-          %h1 New Group
+          %h2 New Study Group
+          %right
+            %a.btn{:href => groups_path, :role => "button", :class => "btn btn-primary a-custom2"} x
         .modal-body
           = form_tag groups_path, :style => "float: right", :method=>'get' do
             = text_field_tag :search, params[:search]
@@ -103,19 +139,24 @@
           %div{:align => "right", :style => "margin: 50 auto"}
             %button{:onclick => "openwindow()"} Create New Group
           = form_tag groups_path, :method => :post do
-            = label :group, :time, 'Time'
-            = text_field :group, :time
-            %br/
-            = label :group, :location, 'Location'
-            = text_field :group, :location
-            %br/
-            = label :group, :class_code, 'Class Code'
-            = text_field :group, :class_code
-            %br/
-            = label :group, :group_name, 'Group Name'
-            = text_field :group, :group_name
-            %br/
-            = submit_tag 'Save Changes'
+            %form
+              %label
+                = label :group, :group_name, 'Group Name'
+              = text_field :group, :group_name, placeholder: "enter a group name..."
+              %br/
+              %label
+                = label :group, :class_code, 'Class Code'
+              = text_field :group, :class_code, placeholder: "e.g. SPAN1600"
+              %br/
+              %label
+                = label :group, :location, 'Location'
+              = text_field :group, :location, placeholder: "enter a place to meet..."
+              %br/
+              %label
+                = label :group, :time, 'Time'
+              = text_field :group, :time, placeholder: "e.g. 5:30am"
+              %br/
+            = submit_tag 'Create!', class: 'btn btn-primary'
              
             %a.btn{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
     %h2{:style=>"text-align: center;"} All Groups
