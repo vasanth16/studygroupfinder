@@ -27,6 +27,7 @@
       -yuh = true
       -break
   - if yuh == false
+    &nbsp&nbsp&nbsp       &emsp;
     %button=link_to 'Join',  new_participation_path(@group, "id" => @group.id, "name" => @group.group_name), class: "button"
   - else
     %button=link_to 'Leave Group', edit_participation_path(@k, "id" => @k.id), data: {confirm:"are you sure?"}, class: "show-delete"
