@@ -91,13 +91,17 @@
     	}
     }
   %body
-    %div{:align => "center", :style => "margin: 50 auto"}
-      %button{:onclick => "openwindow()"} Create New Group
     #myModal.modal
       .modal-content
         .modal-header
           %h1 New Group
         .modal-body
+          = form_tag groups_path, :style => "float: right", :method=>'get' do
+            = text_field_tag :search, params[:search]
+            = submit_tag "search"
+            <br></br>
+          %div{:align => "right", :style => "margin: 50 auto"}
+            %button{:onclick => "openwindow()"} Create New Group
           = form_tag groups_path, :method => :post do
             = label :group, :time, 'Time'
             = text_field :group, :time
@@ -114,7 +118,14 @@
             = submit_tag 'Save Changes'
              
             %a.btn{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
-    %h2 All Groups
+    %h2{:style=>"text-align: center;"} All Groups
+    %headerS{:class => "left",:style=>"font-size:20px;"}
+      %button.btn.btn-primary{:onclick => "openwindow()",:style=>"font-size:20px; background-color:#1053FE;"} Create New Group
+    %headerS{:class => "right", :style => "margin: 50 auto; font-size:20px;"}
+      = form_tag groups_path, :style => "float: right", :method=>'get' do
+        = text_field_tag :search, params[:search]
+        = submit_tag "search"
+    <br></br>
     .mb-4.item-box.event-box
       .item-content.mb-4
         .row
