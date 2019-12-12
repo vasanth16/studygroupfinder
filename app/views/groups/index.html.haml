@@ -144,7 +144,7 @@ s!!!
           %right
             %a.btn{:href => groups_path, :role => "button", :class => "btn btn-primary a-custom2"} x
         .modal-body
-          
+          = form_tag groups_path, :method => :post do
             %form
               %label
                 = label :group, :group_name, 'Group Name'
@@ -173,6 +173,12 @@ s!!!
         = text_field_tag :search, params[:search]
         = submit_tag "Search"
     <br></br>
+=======
+              = submit_tag 'Create!', class: 'btn btn-primary'
+             
+            -# %a.btn{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
+    %h2 All Groups
+>>>>>>> 1fa9852785033f342c3e1b3c831a6b5b64da080d
     .mb-4.item-box.event-box
       .item-content.mb-4
         .row
