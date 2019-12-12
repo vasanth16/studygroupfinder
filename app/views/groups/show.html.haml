@@ -18,17 +18,12 @@
               - puts u.email
 
 - if user_signed_in? 
-  / Declare Variable
   - yuh = false
   - @p = Participation.where(:user_id => current_user.id)
   - @p.each do |p|
     - if p.group_id == @group.id
       -yuh = true
       -break
-    -# - else
-    -#   -puts p.group_id, @group.id
-    -#   %button=link_to 'Join',  new_participation_path(@group, "id" => @group.id, "name" => @group.group_name), class: "button"
-    -#   -break
   - if yuh == false
     %button=link_to 'Join',  new_participation_path(@group, "id" => @group.id, "name" => @group.group_name), class: "button"
 -# %h6= link_to 'Add Member', new_participation_path(@group), class: "show"
