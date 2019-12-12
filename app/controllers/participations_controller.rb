@@ -27,18 +27,18 @@ class ParticipationsController < ApplicationController
             to = Email.new(email: @user.email)
             content = Content.new(type: 'text/plain', value: '
 
-                Hi Welcome to StudyGroupFinder '@user.first_name'
+                Hi Welcome to StudyGroupFinder '+@user.first_name+'
                 
                 You have Successfully joined '+@name+'!
 
-                You can find your group at https://study-group-finder-tulane.herokuapp.com/groups/'params[:id]'
+                You can find your group at https://study-group-finder-tulane.herokuapp.com/groups/'+params[:id]+'
 
                 Thanks for joining and have a great day!
 
             ')
             mail = Mail.new(from,subject, to, content)
 
-            sg = SendGrid::API.new(api_key: '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')
+            sg = SendGrid::API.new(api_key: ENV['SENDGRID_KEY'])
             response = sg.client.mail._('send').post(request_body: mail.to_json)
             puts response.status_code
             puts response.body
