@@ -26,8 +26,8 @@
       -break
   - if yuh == false
     %button=link_to 'Join',  new_participation_path(@group, "id" => @group.id, "name" => @group.group_name), class: "button"
-  - if yuh == true
-    %button=link_to 'Leave Group', controller: 'Participation', action: 'destroy', id: @p.id, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
+  // - if yuh == true
+    // %button=link_to 'Leave Group', controller: 'Participation', action: 'destroy', id: @p.id, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
 -# %h6= link_to 'Add Member', new_participation_path(@group), class: "show"
 
 // %h5= link_to "Delete Group", @group, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
