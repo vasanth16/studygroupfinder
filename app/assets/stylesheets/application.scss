@@ -45,6 +45,11 @@
   &:visited {
     color: #007bff;
   }
+  &:hover {
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+  }
 }
 
 .show {
