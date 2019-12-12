@@ -1,5 +1,7 @@
 class ParticipationsController < ApplicationController
     require 'mail'
+    require 'sendgrid-ruby'
+    include SendGrid
     def index
         @participations = Participation.all
     end
@@ -19,7 +21,22 @@ class ParticipationsController < ApplicationController
 
         
             Participation.create!({:group_id => params[:id], :user_id => current_user.id})
-            UserMailer.with(user: @user, name: @name ).welcome_email.deliver_now
+            #UserMailer.with(user: @user, name: @name ).welcome_email.deliver_now
+            from = Email.new(email:'studyGroupFinderApp@gmail.com')
+            subject = 'You have successfully joined '+@name+'!'
+            to = Email.new(email: @user.email)
+            content = Content.new(type: 'text/plain', value: '
+                Hi! You have Successfully joined '+@name+'! \n
+                Hope you have a cool study sesh \n
+                Thank you for using Syndicate\n
+            ')
+            mail = Mail.new(from,subject, to, content)
+
+            sg = SendGrid::API.new(api_key: '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')
+            response = sg.client.mail._('send').post(request_body: mail.to_json)
+            puts response.status_code
+            puts response.body
+            puts response.headers
             # mail = Mail.new do
             #     from    'vasanthrajvr@gmail.com'
             #     to      'vasanthrajvr@gmail.com'
