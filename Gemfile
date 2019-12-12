@@ -41,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'haml'
 gem 'devise'
+gem 'sendgrid-ruby'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
