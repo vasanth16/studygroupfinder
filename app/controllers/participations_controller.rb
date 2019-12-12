@@ -38,7 +38,7 @@ class ParticipationsController < ApplicationController
             ')
             mail = Mail.new(from,subject, to, content)
 
-            sg = SendGrid::API.new(api_key: ENV['SENDGRID_KEY'])
+            sg = SendGrid::API.new(api_key: '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')
             response = sg.client.mail._('send').post(request_body: mail.to_json)
             puts response.status_code
             puts response.body
