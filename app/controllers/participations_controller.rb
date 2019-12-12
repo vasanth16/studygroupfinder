@@ -26,9 +26,15 @@ class ParticipationsController < ApplicationController
             subject = 'You have successfully joined '+@name+'!'
             to = Email.new(email: @user.email)
             content = Content.new(type: 'text/plain', value: '
-                Hi! You have Successfully joined '+@name+'! \n
-                Hope you have a cool study sesh \n
-                Thank you for using Syndicate\n
+
+                Hi Welcome to StudyGroupFinder '@user.first_name'
+                
+                You have Successfully joined '+@name+'!
+
+                You can find your group at https://study-group-finder-tulane.herokuapp.com/groups/'params[:id]'
+
+                Thanks for joining and have a great day!
+
             ')
             mail = Mail.new(from,subject, to, content)
 
