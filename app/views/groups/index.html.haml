@@ -144,13 +144,7 @@ s!!!
           %right
             %a.btn{:href => groups_path, :role => "button", :class => "btn btn-primary a-custom2"} x
         .modal-body
-          = form_tag groups_path, :style => "float: right", :method=>'get' do
-            = text_field_tag :search, params[:search]
-            = submit_tag "Search"
-            <br></br>
-          %div{:align => "right", :style => "margin: 50 auto"}
-            %button{:onclick => "openwindow()"} Create New Group
-          = form_tag groups_path, :method => :post do
+          
             %form
               %label
                 = label :group, :group_name, 'Group Name'
@@ -177,7 +171,7 @@ s!!!
     %headerS{:class => "right", :style => "margin: 50 auto; font-size:20px;"}
       = form_tag groups_path, :style => "float: right", :method=>'get' do
         = text_field_tag :search, params[:search]
-        = submit_tag "search"
+        = submit_tag "Search"
     <br></br>
     .mb-4.item-box.event-box
       .item-content.mb-4
