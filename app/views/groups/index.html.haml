@@ -3,53 +3,53 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
   :css
     .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        padding-top: 200px;
-        padding-bottom: 300px;
-        width: 100%;
-        height:  100%;
-        overflow: auto;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.4);
-        text-align: center;
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      padding-top: 200px;
+      padding-bottom: 300px;
+      width: 100%;
+      height:  100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4);
+      text-align: center;
     }
     .modal-content {
-        background-color: #FEFEFE;
-        margin: auto;
-        padding: 200px auto;
-        width: 600px;
-        height: 375px
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-        -webkit-animation-name: animatetop;
-        -webkit-animation-duration: 0.4s;
-        animation-name: animatetop;
-        animation-duration: 0.4s
+      background-color: #FEFEFE;
+      margin: auto;
+      padding: 200px auto;
+      width: 600px;
+      height: 375px
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
     }
     @-webkit-keyframes animatetop {
-        from {top:-200px; opacity:0}
-        to {top:0; opacity:1}
+      from {top:-200px; opacity:0}
+      to {top:0; opacity:1}
     }
     @keyframes animatetop {
-        from {top:-200px; opacity:0}
-        to {top:0; opacity:1}
+      from {top:-200px; opacity:0}
+      to {top:0; opacity:1}
     }
     .close {
-        color: white;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
     }
     .close:hover, .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
     }
     .modal-header {
-    // 	display: inline-block;
+    //display: inline-block;
     	line-height: 30px;
         padding: 8px 10px;
         background-color: #007bff;
@@ -81,9 +81,9 @@
     .modal-footer {
     	display: block;
     	line-height: 30px;
-        padding: 2px 10px;
-        background-color: blue;
-        color: white;
+      padding: 2px 10px;
+      background-color: blue;
+      color: white;
     }
     .a-custom2:visted {
       color: black;
@@ -122,7 +122,7 @@
     	var no=document.getElementsByClassName("no")[0];
     	modal.style.display = "block";
     	ok.onclick=function(){
-    		alert("are you sure?");
+    		alert("Are you sure?");
     		modal.style.display = "none";
     	}
     	no.onclick=function(){
@@ -136,6 +136,12 @@
     	}
     }
   %body
+    %div{:align => "left",:style=>"font-size:20px;"}
+      %button.btn.btn-primary{:onclick => "openwindow()",:style=>"font-size:20px; background-color:#1053FE;"} Create New Group
+      %headerS{:class => "right", :style => "margin: 50 auto; font-size:20px;"}
+      = form_tag groups_path, :style => "float: right", :method=>'get' do
+        = text_field_tag :search, params[:search]
+        = submit_tag "Search"
     #myModal.modal
       .modal-content
         .modal-header
@@ -161,7 +167,7 @@
                 = label :group, :time, 'Time'
               = text_field :group, :time, placeholder: "e.g. 5:30am"
               %br/
-            = submit_tag 'Create!', class: 'btn btn-primary'
+              = submit_tag 'Create!', class: 'btn btn-primary'
              
             -# %a.btn{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
     %h2 All Groups
