@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
     require 'mail'
     def index
-        @groups=Group.where(["group_name LIKE ?","%#{params[:search]}%"]).order(:group_name)
+        @groups=Group.where(["class_code LIKE ?","%#{params[:search]}%"]).order(:group_name)
        
         #@groups=Group.all
     end
