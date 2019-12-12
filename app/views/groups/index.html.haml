@@ -51,10 +51,10 @@
     .modal-header {
     //display: inline-block;
     	line-height: 30px;
-      padding: 8px 10px;
-      background-color: #007bff;
-      color: white;
-      text-align: left;
+        padding: 8px 10px;
+        background-color: #007bff;
+        color: white;
+        text-align: left;
     }
     .modal-header right{
       margin-right: 12px;
@@ -142,7 +142,6 @@
       = form_tag groups_path, :style => "float: right", :method=>'get' do
         = text_field_tag :search, params[:search]
         = submit_tag "Search"
-    <br></br>
     #myModal.modal
       .modal-content
         .modal-header
@@ -168,7 +167,7 @@
                 = label :group, :time, 'Time'
               = text_field :group, :time, placeholder: "e.g. 5:30am"
               %br/
-            = submit_tag 'Create!', class: 'btn btn-primary'
+              = submit_tag 'Create!', class: 'btn btn-primary'
              
             -# %a.btn{:href => groups_path, :role => "button", :class=>"text-warning"} Exit
     %h2 All Groups
