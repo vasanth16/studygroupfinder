@@ -45,6 +45,11 @@
   &:visited {
     color: #007bff;
   }
+  &:hover {
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+  }
 }
 
 .show {
@@ -62,6 +67,14 @@
 
 .show-bg{
   background-color: #383c40 !important;
+}
+
+#headerS
+.left{
+  float:left;
+}
+.right{
+  float:right;
 }
 
 .header {
