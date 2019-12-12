@@ -17,10 +17,22 @@
               %td= u.email
               - puts u.email
 
+<<<<<<< HEAD
 
 -# %button{:class=>"button"} Join! = create_participation_path
 &nbsp&nbsp&nbsp       &emsp;
 %button=link_to 'Join',  new_participation_path(@group, "idd" => @group.group_id, "name" => @group.group_name), class: "button"
+=======
+- if user_signed_in? 
+  - yuh = false
+  - @p = Participation.where(:user_id => current_user.id)
+  - @p.each do |p|
+    - if p.group_id == @group.id
+      -yuh = true
+      -break
+  - if yuh == false
+    %button=link_to 'Join',  new_participation_path(@group, "id" => @group.id, "name" => @group.group_name), class: "button"
+>>>>>>> b5bd3dda7b814443a00b90c5df1f9653d5f1f67e
 -# %h6= link_to 'Add Member', new_participation_path(@group), class: "show"
 %h5= link_to "Delete Group", @group, method: :delete, data: {confirm:"are you sure?"}, class: "show-delete"
 //= submit_tag 'join group', add_group_path
