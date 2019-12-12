@@ -19,18 +19,18 @@
     %h1 My Groups
     %script{:src => "js/jquery.js"}
     .mb-4.item-box.event-box
-        .item-content.mb-4
-          .row
-            - @groups.each do |group|
-              .col-10.col-md-4.mb-2
-                %a.custom-card{href: group_path(group)}
-                  .card{style: "min-width: 24rem;"}
-                    .card-body
-                      %h5.card-title #{group.group_name}
-                      %p.card-text-2
-                        Class code:
-                        =group.class_code
-                      %p.card-text-2
-                        Starting time:
-                        =group.time
-      
+      .item-content.mb-4
+        .row
+          - @groups.each do |group|
+            .col-10.col-md-4.mb-2
+              %a.custom-card{href: group_path(group)}
+                .card{style: "min-width: 24rem;"}
+                  .card-body
+                    %h5.card-title #{group.group_name}
+                    %p.card-text-2
+                      Class code:
+                      =group.class_code
+                    %p.card-text-2
+                      Starting time:
+                      =group.time
+    
