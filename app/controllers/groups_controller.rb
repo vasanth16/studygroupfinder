@@ -38,8 +38,23 @@ class GroupsController < ApplicationController
     def create
         params.require(:group)
         permitted = params[:group].permit(:group_id,:time,:location,:class_code,:group_name)
+        if permitted[:time].length < 2 and permitted[:location].length < 2
+            redirect_to groups_path
+            flash[:error] = "Time and Location requires an input of 2 or characters."
+            return
+        elsif permitted[:time].length < 2
+            redirect_to groups_path
+            flash[:error] = "Time requires an input of 2 or characters."
+            return
+        elsif permitted[:location].length < 2
+            redirect_to groups_path
+            flash[:error] = "Location requires an input of 2 or characters."
+            return
+        end
+        
         @group = Group.create!(permitted)
-        flash[:notice] = "#{@group.group_name} was successfully created." 
+        # flash[:notice] = "#{@group.group_name} was successfully created." 
+        flash[:success] = "#{@group.group_name} was successfully created!"
         redirect_to groups_path 
     end
     
